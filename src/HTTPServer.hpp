@@ -11,10 +11,10 @@
 #include <evhttp.h>
 #include <map>
 #include <vector>
-#include "HTTPRequest.h"
-#include "HTTPResponse.h"
-#include "HTTPServlet.h"
+#include "HTTPRequest.hpp"
+#include "HTTPResponse.hpp"
 #include <exception>
+#include "HTTPServlet.hpp"
 
 using namespace std;
 

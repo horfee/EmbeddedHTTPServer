@@ -5,7 +5,7 @@
  *      Author: horfee
  */
 
-#include "HTTPServlet.h"
+#include "HTTPServlet.hpp"
 
 namespace httpserver {
 

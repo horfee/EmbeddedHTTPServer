@@ -8,7 +8,7 @@
 #ifndef HTTPSERVER_HTTPFILESERVLET_H_
 #define HTTPSERVER_HTTPFILESERVLET_H_
 
-#include "HTTPServlet.h"
+#include "HTTPServlet.hpp"
 
 namespace httpserver {
 

@@ -8,9 +8,9 @@
 #ifndef HTTPSERVER_HTTPSERVLET_H_
 #define HTTPSERVER_HTTPSERVLET_H_
 
-#include "HTTPRequest.h"
-#include "HTTPResponse.h"
-#include "HTTPServer.h"
+#include "HTTPRequest.hpp"
+#include "HTTPResponse.hpp"
+#include "HTTPServer.hpp"
 
 namespace httpserver {
 

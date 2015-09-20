@@ -5,7 +5,7 @@
  *      Author: horfee
  */
 
-#include "HTTPRequest.h"
+#include "HTTPRequest.hpp"
 #include <event-internal.h>
 #include <iostream>
 #include <sstream>

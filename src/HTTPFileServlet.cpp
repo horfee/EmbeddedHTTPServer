@@ -5,7 +5,8 @@
  *      Author: horfee
  */
 
-#include "HTTPFileServlet.h"
+#include "HTTPFileServlet.hpp"
+
 #include <unistd.h>
 #include <dirent.h>
 #include <sys/stat.h>
