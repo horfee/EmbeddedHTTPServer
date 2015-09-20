@@ -67,6 +67,10 @@ not_found:
 }
 
 
+void HTTPFileServlet::doPost(HTTPRequest &request, HTTPResponse &response) {
+	this->doGet(request, response);
+}
+
 void HTTPFileServlet::doGet(HTTPRequest &request, HTTPResponse &response) {
 
 	try {

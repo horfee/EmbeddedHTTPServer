@@ -16,7 +16,10 @@ namespace httpserver {
 
 class HTTPServer;
 
-
+/*
+ * This class must be implement to create a custom handler for a given URL.
+ * For now there is no state support nor cookies
+ */
 class HTTPServlet {
 public:
 	HTTPServlet();

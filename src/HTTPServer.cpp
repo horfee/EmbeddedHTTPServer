@@ -14,6 +14,22 @@
 namespace httpserver {
 
 
+BindHttpEventException::BindHttpEventException(std::string listeningAddress, int listeningPort) {
+	address = listeningAddress;
+	port = listeningPort;
+}
+
+BindHttpEventException::~BindHttpEventException() {
+
+}
+
+std::string BindHttpEventException::getAddress() const {
+	return address;
+}
+
+int BindHttpEventException::getPort() const {
+	return port;
+}
 
 HTTPServer::HTTPServer(string listeningAddr, int listeningPort) {
 	serverAddr = listeningAddr;
@@ -136,10 +152,12 @@ void HTTPServer::mainCallBack(struct evhttp_request *req, void *ctx) {
 	}
 }
 
+
 void HTTPServer::addServlet(std::string url, HTTPServlet *servlet) {
 	handlers[url] = servlet;
 	servlet->server = this;
 }
+
 
 void HTTPServer::setAllowedMethods(ev_uint16_t methods ) {
 
@@ -156,22 +174,21 @@ void HTTPServer::start() {
 	/* Create new event base */
 	base = event_base_new();
 	if (!base) {
-		throw "Unable to start server";
+		throw EventException();
 	}
 	http = evhttp_new(base);
 
 	if (!http) {
-		throw "Unable to create evhttp";
+		throw HttpEventException();
 	}
 	evhttp_set_allowed_methods(http, allowedMethods);
 
 	evhttp_set_gencb(http, &HTTPServer::mainCallBack , this);
-	// static_cast(void(*)(struct evhttp_request *, void *))t, (char *)"/");
 
 	/* Now we tell the evhttp what port to listen on */
 	struct evhttp_bound_socket *handle = evhttp_bind_socket_with_handle(http, serverAddr.c_str(), port);
 	if (!handle) {
-		throw "Unable to bind address " + serverAddr + ":" + to_string(port);
+		throw BindHttpEventException(serverAddr, port);
 	}
 
 	/* Lets rock */
