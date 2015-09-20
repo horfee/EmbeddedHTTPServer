@@ -11,7 +11,7 @@
 #include <map>
 #include <string>
 
-namespace alarmpi {
+namespace httpserver {
 
 class HTTPRequest {
 public:
@@ -45,6 +45,6 @@ private:
 	std::string* data;
 };
 
-} /* namespace alarmpi */
+} /* namespace httpserver */
 
 #endif /* HTTPSERVER_HTTPREQUEST_H_ */

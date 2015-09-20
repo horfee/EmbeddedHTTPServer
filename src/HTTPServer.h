@@ -17,7 +17,7 @@
 
 using namespace std;
 
-namespace alarmpi {
+namespace httpserver {
 
 class HTTPServlet;
 
@@ -49,6 +49,6 @@ private:
 	ev_uint16_t allowedMethods;
 };
 
-} /* namespace alarmpi */
+} /* namespace httpserver */
 
 #endif /* HTTPSERVER_H_ */

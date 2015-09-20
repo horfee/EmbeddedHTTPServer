@@ -12,7 +12,7 @@
 #include "HTTPResponse.h"
 #include "HTTPServer.h"
 
-namespace alarmpi {
+namespace httpserver {
 
 class HTTPServer;
 
@@ -42,6 +42,6 @@ private:
 	friend class HTTPServer;
 };
 
-} /* namespace alarmpi */
+} /* namespace httpserver */
 
 #endif /* HTTPSERVER_HTTPSERVLET_H_ */

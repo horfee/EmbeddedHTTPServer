@@ -18,7 +18,7 @@
 
 #define FILE_404	"./404.html"
 
-namespace alarmpi {
+namespace httpserver {
 
 HTTPFileServlet::HTTPFileServlet(std::string rootFolder): rootFolder(rootFolder) {
 }
@@ -153,4 +153,4 @@ void HTTPFileServlet::doGet(HTTPRequest &request, HTTPResponse &response) {
 	}
 }
 
-} /* namespace alarmpi */
+} /* namespace httpserver */

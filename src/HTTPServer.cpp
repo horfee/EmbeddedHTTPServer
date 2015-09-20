@@ -11,7 +11,7 @@
 #include <regex>
 #include <algorithm>
 
-namespace alarmpi {
+namespace httpserver {
 
 
 
@@ -188,4 +188,4 @@ void HTTPServer::stop() {
 	event_base_free(base);
 }
 
-} /* namespace alarmpi */
+} /* namespace httpserver */

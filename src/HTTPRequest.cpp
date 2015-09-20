@@ -10,7 +10,7 @@
 #include <iostream>
 #include <sstream>
 
-namespace alarmpi {
+namespace httpserver {
 
 HTTPRequest::HTTPRequest(struct evhttp_request* req) {
 	this->request = req;
@@ -138,4 +138,4 @@ std::string HTTPRequest::getData() {
 
 	return *data;
 }
-} /* namespace alarmpi */
+} /* namespace httpserver */

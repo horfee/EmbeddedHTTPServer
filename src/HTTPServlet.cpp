@@ -7,7 +7,7 @@
 
 #include "HTTPServlet.h"
 
-namespace alarmpi {
+namespace httpserver {
 
 HTTPServlet::HTTPServlet() {
 	server = NULL;
@@ -31,4 +31,4 @@ void HTTPServlet::doTrace(HTTPRequest &request, HTTPResponse &response) {}
 void HTTPServlet::doConnect(HTTPRequest &request, HTTPResponse &response) {}
 void HTTPServlet::doPatch(HTTPRequest &request, HTTPResponse &response) {}
 
-} /* namespace alarmpi */
+} /* namespace httpserver */

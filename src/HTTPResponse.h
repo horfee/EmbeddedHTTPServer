@@ -13,7 +13,7 @@
 #include "../json/json.h"
 #include <exception>
 
-namespace alarmpi {
+namespace httpserver {
 
 class FileNotFoundException: public std::exception {};
 
@@ -104,6 +104,6 @@ private:
 	std::map<std::string, std::string> headers;
 };
 
-} /* namespace alarmpi */
+} /* namespace httpserver */
 
 #endif /* HTTPSERVER_HTTPRESPONSE_H_ */

@@ -10,7 +10,7 @@
 #include <iostream>
 #include <stdio.h>
 
-namespace alarmpi {
+namespace httpserver {
 
 HTTPResponse::HTTPResponse() {
 	buffer = evbuffer_new();
@@ -125,4 +125,4 @@ void HTTPResponse::appendFile(FILE * f) {
 }
 
 
-} /* namespace alarmpi */
+} /* namespace httpserver */
